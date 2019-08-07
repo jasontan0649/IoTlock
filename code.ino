@@ -143,7 +143,7 @@ void run1(){
     if(client.available()){
     String line = client.readStringUntil('\r');
     // Serial.print(line);    // we’ll parse the HTML body here
-    if (section=="header") { // headers..
+    if (section1=="header") { // headers..
       Serial.print(".");
       if (line=="\n") { // skips the empty space at the beginning
          section="json";
@@ -211,6 +211,7 @@ void run1(){
        // do ntg
         Serial.println("Error data fetched");
       }
+      section = "header"
     }
   }
 }
